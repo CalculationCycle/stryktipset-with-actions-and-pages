@@ -1,0 +1,1 @@
+# stryktipset-with-actions-and-pages

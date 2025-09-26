@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stryktipset Predictor 🇸🇪</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-futbol"></i> Stryktipset Predictor</h1>
+            <p class="tagline">AI-driven predictions for Swedish football betting</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Status Section -->
+        <section class="status-section">
+            <div class="status-card" id="statusCard">
+                <div class="status-icon">
+                    <i class="fas fa-sync-alt spinning" id="statusIcon"></i>
+                </div>
+                <div class="status-content">
+                    <h3 id="statusTitle">Loading...</h3>
+                    <p id="statusMessage">Fetching latest predictions...</p>
+                    <small id="lastUpdated">Last updated: --</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Predictions Section -->
+        <section class="predictions-section">
+            <h2><i class="fas fa-chart-line"></i> This Week's Predictions</h2>
+            
+            <div class="round-info" id="roundInfo">
+                <span class="round-badge">Round --</span>
+                <span class="matches-count">-- matches</span>
+            </div>
+
+            <div class="predictions-container" id="predictionsContainer">
+                <!-- Predictions will be loaded here -->
+                <div class="loading-placeholder">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading predictions...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Matches Section -->
+        <section class="matches-section">
+            <h2><i class="fas fa-calendar-alt"></i> Upcoming Matches</h2>
+            <div class="matches-container" id="matchesContainer">
+                <!-- Matches will be loaded here -->
+                <div class="loading-placeholder">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading matches...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <h2><i class="fas fa-trophy"></i> Prediction Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalPredictions">--</div>
+                    <div class="stat-label">Total Predictions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="currentRound">--</div>
+                    <div class="stat-label">Current Round</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="confidenceScore">--%</div>
+                    <div class="stat-label">Avg Confidence</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="nextUpdate">--</div>
+                    <div class="stat-label">Next Update</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Stryktipset Predictor | 
+               <a href="https://github.com/yourusername/stryktipset-predictor" target="_blank">
+                   <i class="fab fa-github"></i> View on GitHub
+               </a>
+            </p>
+            <p class="disclaimer">
+                <i class="fas fa-exclamation-triangle"></i>
+                This tool is for entertainment purposes only. Please gamble responsibly.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/supabase-js/2.39.0/index.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
